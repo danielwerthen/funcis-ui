@@ -1,17 +1,17 @@
- b-cov
- *.seed
- *.log
- *.csv
- *.dat
- *.out
- *.pid
- *.gz
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
 
- pids
- logs
- results
+pids
+logs
+results
 
- npm-debug.log
- node_modules
- bower_components
- *.swp
+npm-debug.log
+node_modules
+bower_components
+*.swp
