@@ -1,0 +1,9 @@
+{
+	"name": "funcis-ui",
+	"version": "1.0.0",
+	"dependencies": {
+		"backbone": "*",
+		"underscore": "*",
+		"jquery": "*"
+	}
+}

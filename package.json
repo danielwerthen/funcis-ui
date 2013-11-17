@@ -1,0 +1,10 @@
+{
+	"name": "funcis-ui",
+	"dependencies": {
+		"socket.io": "*",
+		"express": "*",
+		"jade": "*",
+		"funcis": "*",
+		"underscore": "*"
+	}
+}
