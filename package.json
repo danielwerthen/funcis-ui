@@ -5,6 +5,7 @@
 		"express": "*",
 		"jade": "*",
 		"funcis": "*",
-		"underscore": "*"
+		"underscore": "*",
+		"marked": "*"
 	}
 }

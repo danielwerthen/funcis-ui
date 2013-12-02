@@ -1,3 +1,11 @@
+let view = '<button id="foo">Hello world</button>'
+let view2 = '<textarea id="foo" placeholder="jade lang"></textarea><div id="bar"></div>'
+
 UI.OnConnection()
 	(id) =>
-		UI.Html('#main', 'hello world', id)
+		UI.Html('#main', view2, id)
+			UI.Bind('#foo', 'change keyup', {}, id)
+				(sel, jade) => 
+					Data.Markdown(jade, {})
+						(html) => 
+							UI.Html('#bar', html, id)

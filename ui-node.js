@@ -10,7 +10,7 @@ ui.on('socket', function (id) {
 	for (var i in onConnections) {
 		onConnections[i](id);
 	}
-	ui.bind('#search', 'click', {}, id, function () {
+	/*ui.bind('#search', 'click', {}, id, function () {
 		ui.render('views/search.jade', {}, '#main', id);
 		setTimeout(function () {
 		ui.bind('#search-box', 'change', {}, id, function (sel, val, attrs) {
@@ -20,7 +20,7 @@ ui.on('socket', function (id) {
 	});
 	ui.bind('#settings', 'click', {}, id, function () {
 		ui.render('views/settings.jade', {}, '#main', id);
-	});
+	});*/
 });
 
 module.exports = {
