@@ -1,11 +1,11 @@
 let view = '<button id="foo">Hello world</button>'
-let view2 = '<textarea id="foo" placeholder="Text area"></textarea><div id="bar"></div>'
+let view2 = '<textarea id="foo" placeholder="jade lang"></textarea><div id="bar"></div>'
 
 UI.OnConnection()
 	(id) =>
-		Data.Interval(1000)
+		Data.Interval(1000) 
 			Data.Time()
-				(h,m,s) =>
+				(h, m, s) => 
 					UI.Html('#seconds', s, id)
 					UI.Html('#minutes', m, id)
 					UI.Html('#hours', h, id)

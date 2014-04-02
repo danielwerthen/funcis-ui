@@ -86,7 +86,9 @@ function UI(opt) {
 		});
 	};
 
-	server.listen(opt && opt.port || 5000);
+	var port = opt && opt.port || 5000;
+	server.listen(port);
+	console.log('Server is running on http://localhost:' + port);
 }
 
 util.inherits(UI, events.EventEmitter);

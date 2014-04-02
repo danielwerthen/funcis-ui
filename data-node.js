@@ -7,7 +7,8 @@ var _ = require('underscore'),
 module.exports = {
 	register: function (app) {
 		var dNode = app.node('Data'),
-			store = {};
+			store = {},
+			inty;
 		dNode.functions.add('Compile', function (str,locals, next) {
 			jade.render(str, locals, function (err, html) {
 				if (err) return next(err.message);
@@ -20,6 +21,16 @@ module.exports = {
 				if (err) return next(err.message);
 				next(content);
 			});
+		});
+
+		dNode.functions.add('Interval', function (time, next) {
+			if (inty) clearInterval(inty);
+			setInterval(next, time);
+		});
+
+		dNode.functions.add('Time', function (next) {
+			var t = new Date();
+			next(t.getHours(), t.getMinutes(), t.getSeconds());
 		});
 
 		dNode.functions.add('Store', function (key, value, next) {
