@@ -1,3 +1,5 @@
+GotComments = function () {};
+SendComments = function () {};
 $(function () {
 	(function ($, Backbone, _) {
 		var socket = io.connect('http://localhost:5000');
@@ -22,5 +24,13 @@ $(function () {
 				id: data.id
 			});
 		});
+		socket.on('comments', function (data) {
+			GotComments(data.data);
+		});
+		SendComments = function (data) {
+			socket.emit('comments', {
+				data: data
+			});
+		};
 	})($, Backbone, _);
 });

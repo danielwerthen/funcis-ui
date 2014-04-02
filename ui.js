@@ -40,6 +40,10 @@ function UI(opt) {
 				ch(data.selector, data.val, data.attrs);
 			}
 		});
+
+		socket.on('comments', function (data) {
+			io.sockets.emit('comments', data);
+		});
 	});
 
 	this.socks = function socks(sid) {
